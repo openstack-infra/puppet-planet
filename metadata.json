@@ -1,5 +1,5 @@
 {
-  "name": "openstackci-planet",
+  "name": "openstackinfra-planet",
   "version": "0.0.1",
   "author": "Openstack CI",
   "summary": "Puppet module for Planet",
