@@ -2,9 +2,9 @@ define planet::site(
   $git_url,
   $vhost_name = "planet.${name}.org"
 ) {
-  include apache
+  include ::httpd
 
-  apache::vhost { $vhost_name:
+  httpd::vhost { $vhost_name:
     docroot  => "/srv/planet/${name}",
     port     => 80,
     priority => '50',
