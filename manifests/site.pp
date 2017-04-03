@@ -20,7 +20,7 @@ define planet::site(
 
   cron { "update_planet_${name}":
     command => "date >> /var/log/planet/${name}.log && cd /var/lib/planet/${name} && git pull -q --ff-only && planet /var/lib/planet/${name}/planet.ini >> /var/log/planet/${name}.log 2>&1",
-    minute  => '*/5',
+    minute  => '*/15',
     user    => 'root',
   }
 }
