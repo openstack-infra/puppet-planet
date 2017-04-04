@@ -1,0 +1,8 @@
+Code-Review+2: Monty Taylor <mordred@inaugust.com>
+Workflow+1: Ian Wienand <iwienand@redhat.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 04 Apr 2017 22:18:10 +0000
+Reviewed-on: https://review.openstack.org/452589
+Project: openstack-infra/puppet-planet
+Branch: refs/heads/master
