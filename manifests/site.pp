@@ -3,6 +3,7 @@ define planet::site(
   $vhost_name = "planet.${name}.org"
 ) {
   include ::httpd
+  include ::logrotate
 
   ::httpd::vhost { $vhost_name:
     docroot  => "/srv/planet/${name}",
@@ -23,6 +24,19 @@ define planet::site(
     minute  => '*/15',
     user    => 'root',
   }
+
+  logrotate::file { "${name}.log":
+    log     => "/var/log/planet/${name}.log",
+    options => [
+                'compress',
+                'copytruncate',
+                'missingok',
+                'rotate 7',
+                'daily',
+                'notifempty',
+                ],
+  }
+
 }
 
 # vim:sw=2:ts=2:expandtab:textwidth=79
