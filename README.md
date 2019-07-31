@@ -1,3 +1,3 @@
-# OpenStack Planet Module
+# This repo has moved to OpenDev
 
-This module installs and configures Planet
+It can now be found at [https://opendev.org/opendev/puppet-planet](https://opendev.org/opendev/puppet-planet)
